@@ -1,0 +1,7 @@
+node_modules
+docs
+.nyc_output
+coverage
+dist
+lib/.babelrc
+
