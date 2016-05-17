@@ -1,5 +1,7 @@
 # Reduxsauce
 
+[![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
+
 Provides a slightly easier way to create actions and reducers for Redux.
 
 There's nothing wrong with how you're doing it now, this is just an aesthetic thing.
