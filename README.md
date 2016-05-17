@@ -1,4 +1,4 @@
-# Reduxsauce
+<img src='./_art/redux_sauce.png' align='left' />
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
 
@@ -6,16 +6,16 @@
 
 Provides a few tools for working with Redux-based codebases.
 
-Currently includes:
+**Currently includes:**
 
-1. createReducer - declutter some reducers and make them easier to read & test
-1. createTypes - quickly define your types object from a string
+1. `createReducer` - declutter reducers for readability and testing
+1. `createTypes` - DRY define your types object from a string
 
-More coming...
+_More coming soon..._
 
 # createReducer
 
-There's a few patterns I've learned (and was taught), but let's break down the parts of a reducer first:
+We're all familiar with the large switch statement and noise in our reducers, and because we all know this clutter, we can use `createReducer` to assume and clear it up!  There's a few patterns I've learned (and was taught), but let's break down the parts of a reducer first:
 
 1. Determining the initial state.
 1. Running
