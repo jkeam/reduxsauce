@@ -2,9 +2,15 @@
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
 
-Provides a slightly easier way to create actions and reducers for Redux.
+# What's The Story?
 
-There's nothing wrong with how you're doing it now, this is just an aesthetic thing.
+Provides a few tools for working with Redux-based codebases.
+
+Currently includes:
+
+1. createReducer - declutter some reducers and make them easier to read & test
+
+More coming...
 
 # createReducer
 
