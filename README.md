@@ -1,38 +1,8 @@
 # Reduxsauce
 
-Provides a slightly easier way to create actions and reducers for redux.
+Provides a slightly easier way to create actions and reducers for Redux.
 
 There's nothing wrong with how you're doing it now, this is just an aesthetic thing.
-
-# createAction
-
-** This is dumb.  Let's not do this.  It's much clearer to do it the normal ES6 way. **
-
-This allows you to create action creators easily.
-
-Creating an action creator with no parameters.
-
-```js
-import { createAction } from 'reduxsauce'
-
-// the vanilla way
-// const myAction = () => ({ type: 'DO_SOMETHING' })
-
-// using reduxsauce
-const myAction = createAction('DO_SOMETHING')
-```
-
-Creating an action creator with additional parameters in the action.
-
-```js
-import { createAction } from 'reduxsauce'
-
-// the vanilla way
-// const myAction = (fun, level) => ({ type: 'DO_SOMETHING', fun, level })
-
-// using reduxsauce
-const myAction = (fun, level) => createAction('DO_SOMETHING', { fun, level })
-```
 
 # createReducer
 
@@ -137,4 +107,35 @@ export default createReducer(INITIAL_STATE, HANDLERS)
 ```
 
 This becomes much more readable, testable, and manageable when you reducers start to grow in complexity or volume.
+
+
+# createAction
+
+** This is dumb.  Let's not do this.  It's much clearer to do it the normal ES6 way. **
+
+This allows you to create action creators easily.
+
+Creating an action creator with no parameters.
+
+```js
+import { createAction } from 'reduxsauce'
+
+// the vanilla way
+// const myAction = () => ({ type: 'DO_SOMETHING' })
+
+// using reduxsauce
+const myAction = createAction('DO_SOMETHING')
+```
+
+Creating an action creator with additional parameters in the action.
+
+```js
+import { createAction } from 'reduxsauce'
+
+// the vanilla way
+// const myAction = (fun, level) => ({ type: 'DO_SOMETHING', fun, level })
+
+// using reduxsauce
+const myAction = (fun, level) => createAction('DO_SOMETHING', { fun, level })
+```
 

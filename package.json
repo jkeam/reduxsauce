@@ -1,7 +1,7 @@
 {
   "name": "reduxsauce",
-  "version": "0.0.1",
-  "description": "Redux with a cherry on top.",
+  "version": "0.0.0",
+  "description": "Some aesthetic toppings for your Redux meal.",
   "repository": {
     "type": "git",
     "url": "https://github.com/skellock/reduxsauce.git"
