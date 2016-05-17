@@ -1,3 +1,4 @@
+<img src='./_art/redux_sauce.png' align=left/>
 # Reduxsauce
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
