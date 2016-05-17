@@ -17,7 +17,8 @@
     "rollup:babelrc:rm": "rm lib/.babelrc",
     "rollup": "BABEL_ENV=production node_modules/.bin/rollup --config ./rollup.config.js",
     "build": "npm run rollup:babelrc:cp && npm run rollup",
-    "gulp": "BABEL_ENV=production gulp build"
+    "gulp": "BABEL_ENV=production gulp build",
+    "release:patch": "npm run dist && xyz -i patch"
   },
   "keywords": [
     "redux"
