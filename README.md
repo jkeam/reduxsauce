@@ -143,6 +143,10 @@ const myAction = (fun, level) => createAction('DO_SOMETHING', { fun, level })
 
 # Changes
 
+### May 17, 2016 - 0.0.2
+
+* `FIX` removes the babel node from package.json as it was breaking stuff upstream  - [@skellock](https://github.com/skellock)
+
 ### May 17, 2016 - 0.0.1
 
 * `NEW` initial release - thx [@skellock](https://github.com/skellock)
