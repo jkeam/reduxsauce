@@ -9,6 +9,7 @@ Provides a few tools for working with Redux-based codebases.
 Currently includes:
 
 1. createReducer - declutter some reducers and make them easier to read & test
+1. createTypes - quickly define your types object from a string
 
 More coming...
 
@@ -116,6 +117,27 @@ export default createReducer(INITIAL_STATE, HANDLERS)
 
 This becomes much more readable, testable, and manageable when you reducers start to grow in complexity or volume.
 
+#  createTypes
+
+Use `createTypes()` to create the object representing your action types.  It's whitespace friendly.
+
+```js
+// Types.js
+import { createTypes } from 'reduxsauce'
+
+export default createTypes(`
+  LOGIN_REQUEST
+  LOGIN_SUCCESS
+  LOGIN_FAILURE
+
+  CHANGE_PASSWORD_REQUEST
+  CHANGE_PASSWORD_SUCCESS
+  CHANGE_PASSWORD_FAILURE
+
+  LOGOUT
+`)
+
+```
 
 # Changes
 
