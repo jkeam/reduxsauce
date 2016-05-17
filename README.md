@@ -141,6 +141,10 @@ export default createTypes(`
 
 # Changes
 
+### May 17, 2016 - 0.1.0
+
+* `NEW` adds createTypes for clean type object creation - [@skellock](https://github.com/skellock)
+
 ### May 17, 2016 - 0.0.3
 
 * `DEL` removes the useless createAction function - [@skellock](https://github.com/skellock)
