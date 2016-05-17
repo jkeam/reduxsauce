@@ -49,22 +49,6 @@
     "rollup-plugin-babel": "^2.4.0",
     "xyz": "^0.5.0"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-runtime",
-      "transform-object-rest-spread"
-    ],
-    "ignore": "test/*",
-    "env": {
-      "development": {
-        "sourceMaps": "inline"
-      }
-    }
-  },
   "ava": {
     "require": [
       "babel-register"

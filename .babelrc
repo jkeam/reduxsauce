@@ -1,0 +1,8 @@
+{
+  "plugins": ["transform-runtime", "transform-object-rest-spread"],
+  "presets": ["es2015", "stage-0"],
+  "ignore": "test/*",
+  "env": {
+    "development": { "sourceMaps": "inline" }
+  }
+}
