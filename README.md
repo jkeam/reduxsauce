@@ -1,5 +1,4 @@
-<img src='./_art/redux_sauce.png' align=left/>
-# Reduxsauce
+<img src='./_art/redux_sauce.png' align='left' />
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
 
