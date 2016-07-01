@@ -107,10 +107,10 @@ export const failure = (state = INITIAL_STATE, action) => {
 }
 
 // map our action types to our reducer functions
-export const HANDLERS = [
+export const HANDLERS = {
   [Types.GOODS_SUCCESS]: success,
   [Types.GOODS_FAILURE]: failure
-]
+}
 
 export default createReducer(INITIAL_STATE, HANDLERS)
 ```
@@ -156,4 +156,3 @@ export default createTypes(`
 ### May 17, 2016 - 0.0.1
 
 * `NEW` initial release - [@skellock](https://github.com/skellock)
-
