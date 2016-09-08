@@ -175,6 +175,8 @@ Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: '
 
 ### September 8, 2016 - 0.2.0
 
+* `NEW` adds createActions for building your types & action creators - [@gantman](https://github.com/gantman) & [@skellock](https://github.com/skellock)
+
 ### May 17, 2016 - 0.1.0
 
 * `NEW` adds createTypes for clean type object creation - [@skellock](https://github.com/skellock)
