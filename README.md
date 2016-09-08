@@ -10,6 +10,7 @@ Provides a few tools for working with Redux-based codebases.
 
 1. `createReducer` - declutter reducers for readability and testing
 1. `createTypes` - DRY define your types object from a string
+1. `createActions` - builds your Action Types and Action Creators at the same time
 
 _More coming soon..._
 
@@ -139,7 +140,40 @@ export default createTypes(`
 
 ```
 
+# createActions
+
+Use `createActions()` to build yourself an object which contains `Types` and `Creators`.
+
+```js
+import { createActions } from 'reduxsauce'
+
+const { Types, Creators } = createActions({
+  loginRequest: ['username', 'password'],
+  loginSuccess: ['username'],
+  loginFailure: ['error'],
+  logout: null,
+  custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
+})
+```
+
+The keys of the object will become keys of the `Creators`.  They will also become the keys of the `Types` after being converted to SCREAMING_SNAKE_CASE.
+
+The values will control the flavour of the action creator.  When null is passed, an action creator will be made that only has the type.  For example:
+
+```js
+Creators.logout() // { type: 'LOGOUT' }
+```
+
+By passing an array of items, these become the parameters of the creator and are attached to the action.
+
+```js
+Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: 'steve', password: 'secret' }
+```
+
+
 # Changes
+
+### September 8, 2016 - 0.2.0
 
 ### May 17, 2016 - 0.1.0
 
