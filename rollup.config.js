@@ -7,8 +7,11 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      // presets: ['es2015-rollup', 'stage-1']
-      presets: ['stage-0']
+      presets: [
+        ['es2015', { modules: false }],
+        'stage-0'
+      ],
+      plugins: ['external-helpers'],
     }),
     ramda(),
   ],
