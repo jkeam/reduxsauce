@@ -140,6 +140,10 @@ export default createTypes(`
 
 ```
 
+### Options
+
+ * `prefix`: prepend the string to all created types.
+
 # createActions
 
 Use `createActions()` to build yourself an object which contains `Types` and `Creators`.
@@ -170,8 +174,15 @@ By passing an array of items, these become the parameters of the creator and are
 Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: 'steve', password: 'secret' }
 ```
 
+### Options
+
+ * `prefix`: prepend the string to all created types.
 
 # Changes
+
+### December 8, 2016 - 0.3.0
+
+* `NEW` createActions and createTypes now take optional `options` object with `prefix` key - [@jbblanchet](https://github.com/jbblanchet) & [@skellock](https://github.com/skellock)
 
 ### September 8, 2016 - 0.2.0
 
