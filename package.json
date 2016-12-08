@@ -9,7 +9,7 @@
   "main": "./dist/reduxsauce.js",
   "scripts": {
     "test": "ava",
-    "test:watch": "ava --watch",
+    "watch": "ava --watch",
     "coverage": "nyc ava",
     "build": "rollup -c"
   },

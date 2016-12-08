@@ -136,13 +136,13 @@ export default createTypes(`
   CHANGE_PASSWORD_FAILURE
 
   LOGOUT
-`)
+`, {}) // options - the 2nd parameter is optional
 
 ```
 
 ### Options
 
- * `prefix`: prepend the string to all created types.
+ * `prefix`: prepend the string to all created types. This is handy if you're looking to namespace your actions.
 
 # createActions
 
@@ -157,7 +157,7 @@ const { Types, Creators } = createActions({
   loginFailure: ['error'],
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
-})
+}, {}) // options - the 2nd parameter is optional
 ```
 
 The keys of the object will become keys of the `Creators`.  They will also become the keys of the `Types` after being converted to SCREAMING_SNAKE_CASE.
@@ -176,7 +176,7 @@ Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: '
 
 ### Options
 
- * `prefix`: prepend the string to all created types.
+ * `prefix`: prepend the string to all created types. This is handy if you're looking to namespace your actions.
 
 # Changes
 

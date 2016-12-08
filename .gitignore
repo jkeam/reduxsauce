@@ -4,4 +4,4 @@ docs
 coverage
 dist
 lib/.babelrc
-
+yarn.lock
