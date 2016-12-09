@@ -42,6 +42,7 @@ test('custom action creators are supported', t => {
 })
 
 test('action types prefix is supported', t => {
-  const { Types } = createActions({ helloWorld: null }, { prefix: 'SUPER_' })
+  const { Types, Creators } = createActions({ helloWorld: null }, { prefix: 'SUPER_' })
   t.is(Types.HELLO_WORLD, 'SUPER_HELLO_WORLD')
+  t.is('SUPER_HELLO_WORLD', Creators.helloWorld().type)
 })
