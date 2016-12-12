@@ -180,7 +180,11 @@ Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: '
 
 # Changes
 
-### December 8, 2016 - 0.3.0
+### December 12, 2016 - 0.4.1
+
+* `FIX` creators now get the `prefix` as well - [@jbblanchet](https://github.com/jbblanchet)
+
+### December 8, 2016 - 0.4.0
 
 * `NEW` createActions and createTypes now take optional `options` object with `prefix` key - [@jbblanchet](https://github.com/jbblanchet) & [@skellock](https://github.com/skellock)
 
