@@ -12,6 +12,12 @@ test('throws an error when the handlers are not an object', (t) => {
   t.throws(() => createReducer(1))
 })
 
+test('throws an error when the handlers have an undefined key', (t) => {
+  const a = (state, action) => state
+  t.throws(() => createReducer(1, { [undefined]: a }))
+  t.throws(() => createReducer(1, { [void 0]: a }))
+})
+
 test('creates a reducer function', (t) => {
   t.truthy(createReducer(1, {}))
 })
