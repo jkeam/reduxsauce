@@ -20,6 +20,16 @@ test('creates an object with the right keys and values', (t) => {
   t.is(values[0], 'one')
 })
 
+test('handles the prefix option', (t) => {
+  const types = createTypes('one', {
+    prefix: 'SUPER_'
+  })
+  const keys = R.keys(types)
+  const values = R.values(types)
+  t.is(keys[0], 'one')
+  t.is(values[0], 'SUPER_one')
+})
+
 test('handles space delimited', (t) => {
   const types = createTypes('one two three')
   const keys = R.keys(types)

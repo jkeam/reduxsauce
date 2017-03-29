@@ -3,8 +3,8 @@ import createActions from '../lib/createActions'
 
 test('throws an error if passed crap', t => {
   t.throws(() => createActions(null))
-  t.throws(() => createReducer())
-  t.throws(() => createReducer({}))
+  t.throws(() => createActions())
+  t.throws(() => createActions({}))
 })
 
 test('has Creators and Types', t => {
@@ -14,7 +14,7 @@ test('has Creators and Types', t => {
 })
 
 test('types are snake case', t => {
-  const { Types } = createActions ({ helloWorld: null })
+  const { Types } = createActions({ helloWorld: null })
   t.is(Types.HELLO_WORLD, 'HELLO_WORLD')
 })
 
@@ -37,6 +37,12 @@ test('[\'steve\'] produces a valid action creator', t => {
 })
 
 test('custom action creators are supported', t => {
-  const { Creators }  = createActions({ custom: () => 123 })
+  const { Creators } = createActions({ custom: () => 123 })
   t.is(Creators.custom(), 123)
+})
+
+test('action types prefix is supported', t => {
+  const { Types, Creators } = createActions({ helloWorld: null }, { prefix: 'SUPER_' })
+  t.is(Types.HELLO_WORLD, 'SUPER_HELLO_WORLD')
+  t.is('SUPER_HELLO_WORLD', Creators.helloWorld().type)
 })

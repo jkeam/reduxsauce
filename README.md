@@ -136,9 +136,13 @@ export default createTypes(`
   CHANGE_PASSWORD_FAILURE
 
   LOGOUT
-`)
+`, {}) // options - the 2nd parameter is optional
 
 ```
+
+### Options
+
+ * `prefix`: prepend the string to all created types. This is handy if you're looking to namespace your actions.
 
 # createActions
 
@@ -153,7 +157,7 @@ const { Types, Creators } = createActions({
   loginFailure: ['error'],
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
-})
+}, {}) // options - the 2nd parameter is optional
 ```
 
 The keys of the object will become keys of the `Creators`.  They will also become the keys of the `Types` after being converted to SCREAMING_SNAKE_CASE.
@@ -170,8 +174,19 @@ By passing an array of items, these become the parameters of the creator and are
 Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: 'steve', password: 'secret' }
 ```
 
+### Options
+
+ * `prefix`: prepend the string to all created types. This is handy if you're looking to namespace your actions.
 
 # Changes
+
+### December 12, 2016 - 0.4.1
+
+* `FIX` creators now get the `prefix` as well - [@jbblanchet](https://github.com/jbblanchet)
+
+### December 8, 2016 - 0.4.0
+
+* `NEW` createActions and createTypes now take optional `options` object with `prefix` key - [@jbblanchet](https://github.com/jbblanchet) & [@skellock](https://github.com/skellock)
 
 ### September 8, 2016 - 0.2.0
 
