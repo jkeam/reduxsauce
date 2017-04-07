@@ -15,5 +15,6 @@ export default {
     }),
     ramda(),
   ],
+  external: ['ramda', 'ramdasauce'],
   dest: 'dist/reduxsauce.js'
 }
