@@ -11,6 +11,7 @@ Provides a few tools for working with Redux-based codebases.
 1. `createReducer` - declutter reducers for readability and testing
 1. `createTypes` - DRY define your types object from a string
 1. `createActions` - builds your Action Types and Action Creators at the same time
+1. `resettableReducer` - allows your reducers to be reset
 
 _More coming soon..._
 
@@ -178,7 +179,37 @@ Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: '
 
  * `prefix`: prepend the string to all created types. This is handy if you're looking to namespace your actions.
 
+# resettableReducer
+
+Provides a "higher-order reducer" to help reset your state.  Instead of adding an additional reset command to your individual reducers, you can wrap them with this.
+
+Check it out.
+
+```js
+import { resettableReducer } from 'reduxsauce'
+import { combineReducers } from 'redux'
+
+// some reducers you have already created
+import firstReducer from './firstReducer'
+import secondReducer from './secondReducer'
+import thirdReducer from './thirdReducer'
+
+// listen for the action type of 'RESET', you can change this.
+const resettable = resettableReducer('RESET')
+
+// reducers 1 & 3 will be resettable, but 2 won't.
+export default combineReducers({
+  first: resettable(firstReducer),
+  second: secondReducer,
+  third: resettable(thirdReducer)
+})
+```
+
 # Changes
+
+### April 7, 2017 - 0.5.0
+
+* `NEW` adds `resettableReducer` for easier reducer uh... resetting. By @skellock.
 
 ### December 12, 2016 - 0.4.1
 

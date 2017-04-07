@@ -69,4 +69,3 @@ test('handles multiple <CR> delimiters', (t) => {
   t.is(keys[2], 'THREE')
   t.is(values[2], 'THREE')
 })
-
