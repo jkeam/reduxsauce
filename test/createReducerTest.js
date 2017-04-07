@@ -58,4 +58,3 @@ test('invokes the correct action on an object', (t) => {
   const v = r(i, { type: 'hi' })
   t.deepEqual(v, { i: 6 })
 })
-
