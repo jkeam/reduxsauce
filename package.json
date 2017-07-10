@@ -24,9 +24,9 @@
     "README.md"
   ],
   "dependencies": {
-    "ramda": "^0.23.0",
-    "ramdasauce": "^1.2.0",
-    "redux": "^3.6.0"
+    "ramda": "^0.24.1",
+    "ramdasauce": "^2.0.0",
+    "redux": "^3.7.1"
   },
   "devDependencies": {
     "ava": "^0.19.0",
