@@ -38,13 +38,12 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-stage-0": "^6.22.0",
     "np": "^2.16.0",
-    "nyc": "^10.2.0",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1",
+    "nyc": "^11.1.0",
+    "rollup": "^0.47.2",
+    "rollup-plugin-babel": "^3.0.1",
     "rollup-plugin-filesize": "^1.4.2",
     "rollup-plugin-ramda": "^1.0.5",
-    "standard": "^10.0.1",
-    "xyz": "^2.1.0"
+    "standard": "^10.0.1"
   },
   "ava": {
     "require": [
