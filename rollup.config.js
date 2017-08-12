@@ -3,6 +3,9 @@ import ramda from 'rollup-plugin-ramda'
 import filesize from 'rollup-plugin-filesize'
 
 const ramdaFns = [
+  'any',
+  'equals',
+  'reject',
   'isNil',
   'is',
   'has',
