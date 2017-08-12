@@ -4,7 +4,7 @@
   "description": "Some aesthetic toppings for your Redux meal.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skellock/reduxsauce.git"
+    "url": "https://github.com/infinitered/reduxsauce.git"
   },
   "main": "./dist/reduxsauce.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "redux": "^3.7.1"
   },
   "devDependencies": {
-    "ava": "^0.19.0",
+    "ava": "^0.21.0",
     "babel-cli": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-plugin-external-helpers": "^6.18.0",
@@ -41,6 +41,7 @@
     "nyc": "^10.2.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-filesize": "^1.4.2",
     "rollup-plugin-ramda": "^1.0.5",
     "standard": "^10.0.1",
     "xyz": "^2.1.0"
