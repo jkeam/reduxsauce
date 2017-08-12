@@ -21,6 +21,7 @@
   "license": "MIT",
   "files": [
     "dist/reduxsauce.js",
+    "lib",
     "README.md"
   ],
   "dependencies": {
