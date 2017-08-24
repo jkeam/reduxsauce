@@ -70,6 +70,22 @@ export const HANDLERS = {
 
 The `export` is only needed for testing.  It's optional.
 
+#### Defualt handler
+
+Sometimes you want to add a default handler to your reducers (such as delegating actions to sub reducers). To achieve that you can use `DEFAULT` action type in your configuration.
+
+```js
+import Types from './actionTypes'
+import { Types as ReduxSauceTypes } from 'reduxsauce'
+
+export const HANDLERS = {
+  [Types.SAY_GOODBYE]: sayGoodbye
+  [Types.SAY_GOODBYE]: sayGoodbye
+  [ReduxSauceTypes.DEFAULT]: defaultHandler,
+}
+```
+
+With code above `defaultHandler` will be invoked in case the action didn't match any type in the configuration.
 
 #### Injecting Into The Global State Tree
 
