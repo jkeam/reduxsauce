@@ -17,7 +17,7 @@ _More coming soon..._
 
 # createReducer
 
-We're all familiar with the large switch statement and noise in our reducers, and because we all know this clutter, we can use `createReducer` to assume and clear it up!  There's a few patterns I've learned (and was taught), but let's break down the parts of a reducer first:
+We're all familiar with the large switch statement and noise in our reducers, and because we all know this clutter, we can use `createReducer` to assume and clear it up!  There are a few patterns I've learned (and was taught), but let's break down the parts of a reducer first:
 
 1. Determining the initial state.
 1. Running
@@ -117,7 +117,7 @@ export const HANDLERS = {
 export default createReducer(INITIAL_STATE, HANDLERS)
 ```
 
-This becomes much more readable, testable, and manageable when you reducers start to grow in complexity or volume.
+This becomes much more readable, testable, and manageable when your reducers start to grow in complexity or volume.
 
 #  createTypes
 
