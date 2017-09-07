@@ -1,5 +1,6 @@
 import test from 'ava'
 import createReducer from '../lib/createReducer'
+import * as Types from '../lib/Types'
 
 test('throws an error when initial state is missing', (t) => {
   t.throws(() => createReducer(null))
@@ -49,6 +50,17 @@ test('invokes the correct actions', (t) => {
   const r = createReducer(i, { 'hi': a })
   const v = r(i, {type: 'hi'})
   t.is(v, 6)
+})
+
+test('falls down to default handler', (t) => {
+  const i = 5
+  const a = (state, action) => state + 1
+  const b = (state, action) => state + 2
+  const r = createReducer(i, { 'hi': a, [Types.DEFAULT]: b })
+  const v1 = r(i, {type: 'hi'})
+  t.is(v1, 6)
+  const v2 = r(i, {type: 'unknown action'})
+  t.is(v2, 7)
 })
 
 test('invokes the correct action on an object', (t) => {
