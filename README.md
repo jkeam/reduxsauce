@@ -70,7 +70,7 @@ export const HANDLERS = {
 
 The `export` is only needed for testing.  It's optional.
 
-#### Defualt handler
+#### Default handler
 
 Sometimes you want to add a default handler to your reducers (such as delegating actions to sub reducers). To achieve that you can use `DEFAULT` action type in your configuration.
 
@@ -192,7 +192,8 @@ By passing an array of items, these become the parameters of the creator and are
 Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: 'steve', password: 'secret' }
 ```
 
-By passing an object of {key: defaultValue}, default values are applied.
+By passing an object of `{ key: defaultValue }`, default values are applied.
+
 In this case, invoke the action by putting all parameters into an object as the first argument.
 
 ```js
@@ -235,34 +236,46 @@ export default combineReducers({
 
 # Changes
 
+### September 26, 2017 - 0.7.0
+
+* `NEW` Adds ability to have a default or fallback reducer for nesting reducers or catch-alls. @vaukalak
+* `NEW` Adds default values to `createActions` if passed an object instead of an array or function. @zhang-z
+* `DOCS` Fixes typos. @quajo
+
+### July 10, 2017 - 0.6.0
+
+* `NEW` Makes unbundled code available for all you tree-shakers out there. @skellock & @messense
+* `FIX` Corrects issue with prefixed action names. @skellock
+* `FIX` Upgrades dependencies. @messense
+
 ### April 7, 2017 - 0.5.0
 
-* `NEW` adds `resettableReducer` for easier reducer uh... resetting. By @skellock.
+* `NEW` adds `resettableReducer` for easier reducer uh... resetting. @skellock
 
 ### December 12, 2016 - 0.4.1
 
-* `FIX` creators now get the `prefix` as well - [@jbblanchet](https://github.com/jbblanchet)
+* `FIX` creators now get the `prefix` as well. @jbblanchet
 
 ### December 8, 2016 - 0.4.0
 
-* `NEW` createActions and createTypes now take optional `options` object with `prefix` key - [@jbblanchet](https://github.com/jbblanchet) & [@skellock](https://github.com/skellock)
+* `NEW` createActions and createTypes now take optional `options` object with `prefix` key. @jbblanchet & @skellock
 
 ### September 8, 2016 - 0.2.0
 
-* `NEW` adds createActions for building your types & action creators - [@gantman](https://github.com/gantman) & [@skellock](https://github.com/skellock)
+* `NEW` adds createActions for building your types & action creators. @gantman & @skellock
 
 ### May 17, 2016 - 0.1.0
 
-* `NEW` adds createTypes for clean type object creation - [@skellock](https://github.com/skellock)
+* `NEW` adds createTypes for clean type object creation. @skellock
 
 ### May 17, 2016 - 0.0.3
 
-* `DEL` removes the useless createAction function - [@skellock](https://github.com/skellock)
+* `DEL` removes the useless createAction function. @skellock
 
 ### May 17, 2016 - 0.0.2
 
-* `FIX` removes the babel node from package.json as it was breaking stuff upstream - [@skellock](https://github.com/skellock)
+* `FIX` removes the babel node from package.json as it was breaking stuff upstream. @skellock
 
 ### May 17, 2016 - 0.0.1
 
-* `NEW` initial release - [@skellock](https://github.com/skellock)
+* `NEW` initial release. @skellock
