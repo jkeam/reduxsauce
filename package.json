@@ -12,7 +12,8 @@
     "watch": "ava --watch",
     "coverage": "nyc ava",
     "build": "rollup -c",
-    "lint": "standard"
+    "lint": "standard",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "redux"
