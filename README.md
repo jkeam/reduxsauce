@@ -172,6 +172,7 @@ const { Types, Creators } = createActions({
   loginRequest: ['username', 'password'],
   loginSuccess: ['username'],
   loginFailure: ['error'],
+  requestWithDefaultValues: { username: 'guest', password: null }
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
 }, {}) // options - the 2nd parameter is optional
@@ -189,6 +190,17 @@ By passing an array of items, these become the parameters of the creator and are
 
 ```js
 Creators.loginRequest('steve', 'secret') // { type: 'LOGIN_REQUEST', username: 'steve', password: 'secret' }
+```
+
+By passing an object of {key: defaultValue}, default values are applied.
+In this case, invoke the action by putting all parameters into an object as the first argument.
+
+```js
+Creators.requestWithDefaultValues({
+  password: '123456',
+  undefinedKeyWontBeUsed: true
+})
+// { type: 'REQUEST_WITH_DEFAULT_VALUES', username: 'guest', password: '123456' }
 ```
 
 ### Options
