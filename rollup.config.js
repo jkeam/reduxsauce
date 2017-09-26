@@ -24,6 +24,7 @@ const ramdaFns = [
   'mapObjIndexed',
   'replace',
   'toUpper',
+  'pick',
   '__',
   'zipObj'
 ].map(fn => `ramda/src/${fn}`)
