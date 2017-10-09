@@ -80,7 +80,6 @@ import { Types as ReduxSauceTypes } from 'reduxsauce'
 
 export const HANDLERS = {
   [Types.SAY_GOODBYE]: sayGoodbye
-  [Types.SAY_GOODBYE]: sayGoodbye
   [ReduxSauceTypes.DEFAULT]: defaultHandler,
 }
 ```
