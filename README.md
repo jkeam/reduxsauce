@@ -79,7 +79,7 @@ import Types from './actionTypes'
 import { Types as ReduxSauceTypes } from 'reduxsauce'
 
 export const HANDLERS = {
-  [Types.SAY_GOODBYE]: sayGoodbye
+  [Types.SAY_GOODBYE]: sayGoodbye,
   [ReduxSauceTypes.DEFAULT]: defaultHandler,
 }
 ```
@@ -171,7 +171,7 @@ const { Types, Creators } = createActions({
   loginRequest: ['username', 'password'],
   loginSuccess: ['username'],
   loginFailure: ['error'],
-  requestWithDefaultValues: { username: 'guest', password: null }
+  requestWithDefaultValues: { username: 'guest', password: null },
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
 }, {}) // options - the 2nd parameter is optional
