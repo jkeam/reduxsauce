@@ -235,6 +235,11 @@ export default combineReducers({
 
 # Changes
 
+### May 10, 2018 - 1.0.0 - 💃
+
+* `NEW` drops redux dependency sinc we weren't using it @pewniak747
+
+
 ### September 26, 2017 - 0.7.0
 
 * `NEW` Adds ability to have a default or fallback reducer for nesting reducers or catch-alls. @vaukalak
