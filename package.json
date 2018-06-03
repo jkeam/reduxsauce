@@ -23,7 +23,8 @@
   "files": [
     "dist/reduxsauce.js",
     "lib",
-    "README.md"
+    "README.md",
+    "index.d.ts"
   ],
   "dependencies": {
     "ramda": "^0.24.1",
@@ -45,6 +46,9 @@
     "rollup-plugin-filesize": "^1.4.2",
     "rollup-plugin-ramda": "^1.0.5",
     "standard": "^10.0.1"
+  },
+  "peerDependencies": {
+    "redux": "4.x"
   },
   "ava": {
     "require": [
