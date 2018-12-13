@@ -13,7 +13,9 @@
     "coverage": "nyc ava",
     "build": "rollup -c",
     "lint": "standard",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "ci:publish": "yarn semantic-release",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "redux"
@@ -30,6 +32,7 @@
     "ramdasauce": "^2.0.0"
   },
   "devDependencies": {
+    "@semantic-release/git": "^7.0.5",
     "ava": "^0.21.0",
     "babel-cli": "^6.24.0",
     "babel-eslint": "^7.2.1",
@@ -38,12 +41,12 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-stage-0": "^6.22.0",
-    "np": "^2.16.0",
     "nyc": "^11.1.0",
     "rollup": "^0.47.2",
     "rollup-plugin-babel": "^3.0.1",
     "rollup-plugin-filesize": "^1.4.2",
     "rollup-plugin-ramda": "^1.0.5",
+    "semantic-release": "^15.12.5",
     "standard": "^10.0.1"
   },
   "ava": {
@@ -60,5 +63,20 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": "package.json",
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
   }
 }
