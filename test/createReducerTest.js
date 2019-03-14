@@ -3,8 +3,8 @@ import createReducer from '../lib/createReducer'
 import * as Types from '../lib/Types'
 
 test('throws an error when initial state is missing', (t) => {
-  t.throws(() => createReducer(null))
   t.throws(() => createReducer())
+  t.throws(() => createReducer(undefined))
 })
 
 test('throws an error when the handlers are not an object', (t) => {
@@ -69,4 +69,14 @@ test('invokes the correct action on an object', (t) => {
   const r = createReducer(i, { 'hi': a })
   const v = r(i, { type: 'hi' })
   t.deepEqual(v, { i: 6 })
+})
+
+test('allows a reducer with null initial state', (t) => {
+  const i = null
+  const a = (state, action) => 'hello';
+  const r = createReducer(i, { 'hi': a })
+  const v = r(i, {type: 'unknown action'})
+  t.is(v, null)
+  const v2 = r(i, {type: 'hi'})
+  t.is(v2, 'hello')
 })
