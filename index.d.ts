@@ -1,20 +1,20 @@
 declare module 'reduxsauce' {
-  import { AnyAction, Reducer } from 'redux';
+  import { Action, AnyAction, Reducer } from 'redux';
 
   export interface Actions {
     [action: string]: string[] | null;
   }
 
-  export interface ActionTypes {
+  export interface DefaultActionTypes {
     [action: string]: string;
   }
 
-  export interface ActionCreators {
+  export interface DefaultActionCreators {
     [action: string]: (...args: any[]) => AnyAction;
   }
 
-  export interface Handlers<S> {
-    [type: string]: (state: S, action: AnyAction) => S;
+  export interface Handlers<S, A = AnyAction> {
+    [type: string]: (state: S, action: A) => S;
   }
 
   /**
@@ -26,20 +26,20 @@ declare module 'reduxsauce' {
     prefix: string;
   }
 
-  interface CreatedActions {
-    Types: ActionTypes;
-    Creators: ActionCreators;
+  export interface CreatedActions<T = DefaultActionTypes, C = DefaultActionCreators> {
+    Types: T;
+    Creators: C;
   }
 
-  export function createActions(
+  export function createActions<T = DefaultActionTypes, C = DefaultActionCreators>(
     actions: Actions,
     options?: Options
-  ): CreatedActions;
+  ): CreatedActions<T, C>;
 
-  export function createReducer<S>(
+  export function createReducer<S = {}, A extends Action = AnyAction>(
     initialState: S,
-    handlers: Handlers<S>
-  ): Reducer<S>;
+    handlers: Handlers<S, A>
+  ): Reducer<S, A>;
 
-  export function createTypes(types: string, options?: Options): ActionTypes;
+  export function createTypes<T = DefaultActionTypes>(types: string, options?: Options): T;
 }
