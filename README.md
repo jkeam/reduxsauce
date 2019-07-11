@@ -6,6 +6,11 @@ Hey there! We're happy you decided to check this project out. Since we no longer
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
 
+## Creating a new release
+
+To create a new release, you need to compile the code first with `npm run build` and then create a package using `npm pack`. Add the generated .tgz file to the release in github. Then reference that file in your package.json. This is required because otherwise you will get an error saying that the file `dist/reduxsauce.js` does not exist.
+
+
 # What's The Story?
 
 Provides a few tools for working with Redux-based codebases.
