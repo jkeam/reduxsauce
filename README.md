@@ -1,7 +1,3 @@
-## This project is archived
-
-Hey there! We're happy you decided to check this project out. Since we no longer use it at [Infinite Red](https://infinite.red), we've decided to archive it. So it's no longer maintained. If you'd like to use the code or fork it and maintain it yourself, please help yourself. If you'd like us to link to your maintained fork for others who may find it useful, just email us at hello@infinite.red and we'll put a link below this notice. Happy coding!
-
 <img src='./_art/redux_sauce.png' align='left' />
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
