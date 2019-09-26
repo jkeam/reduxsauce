@@ -2,6 +2,7 @@
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
 [![Build Status](https://travis-ci.org/jkeam/reduxsauce.svg?branch=master)](https://travis-ci.org/jkeam/reduxsauce)
+[![Coverage Status](https://coveralls.io/repos/github/jkeam/reduxsauce/badge.svg?branch=master)](https://coveralls.io/github/jkeam/reduxsauce?branch=master)
 
 # What's The Story?
 
