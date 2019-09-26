@@ -73,10 +73,17 @@ test('invokes the correct action on an object', (t) => {
 
 test('allows a reducer with null initial state', (t) => {
   const i = null
-  const a = (state, action) => 'hello';
+  const a = (state, action) => 'hello'
   const r = createReducer(i, { 'hi': a })
   const v = r(i, {type: 'unknown action'})
   t.is(v, null)
   const v2 = r(i, {type: 'hi'})
   t.is(v2, 'hello')
+})
+
+test('returns the initial state if no actions are passed in', (t) => {
+  const i = { i: 5 }
+  const r = createReducer(i, {})
+  const v = r()
+  t.is(v, i)
 })

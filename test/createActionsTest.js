@@ -58,3 +58,7 @@ test('action types prefix is supported', t => {
   t.is(Types.HELLO_WORLD, 'SUPER_HELLO_WORLD')
   t.is('SUPER_HELLO_WORLD', Creators.helloWorld().type)
 })
+
+test('throws an error if custom action creator is junk', t => {
+  t.throws(() => createActions({ custom: 'notSupportedType' }))
+})
