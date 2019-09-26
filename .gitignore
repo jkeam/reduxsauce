@@ -5,3 +5,4 @@ coverage
 dist
 lib/.babelrc
 yarn.lock
+.nvmrc
