@@ -1,6 +1,7 @@
 <img src='./_art/redux_sauce.png' align='left' />
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
+[![Build Status](https://travis-ci.org/jkeam/reduxsauce.svg?branch=master)](https://travis-ci.org/jkeam/reduxsauce)
 
 # What's The Story?
 
