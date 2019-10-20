@@ -30,12 +30,11 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "ramda": "^0.24.1",
-    "ramdasauce": "^2.0.0"
+    "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@semantic-release/git": "^7.0.5",
-    "ava": "^0.21.0",
+    "@semantic-release/git": "^7.0.16",
+    "ava": "^2.4.0",
     "babel-cli": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-plugin-external-helpers": "^6.18.0",
@@ -43,14 +42,14 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-stage-0": "^6.22.0",
-    "coveralls": "^3.0.6",
-    "nyc": "^11.9.0",
+    "coveralls": "^3.0.7",
+    "nyc": "^14.1.1",
     "rollup": "^0.47.2",
     "rollup-plugin-babel": "^3.0.1",
     "rollup-plugin-filesize": "^1.4.2",
     "rollup-plugin-ramda": "^1.0.5",
-    "semantic-release": "^15.12.5",
-    "standard": "^10.0.1"
+    "semantic-release": "^15.13.27",
+    "standard": "^14.3.1"
   },
   "peerDependencies": {
     "redux": "4.x"
@@ -60,11 +59,9 @@
       "babel-core/register"
     ],
     "babel": {
-      "babelrc": false,
-      "presets": [
-        "stage-0",
-        "es2015"
-      ]
+      "testOptions": {
+        "babelrc": false
+      }
     }
   },
   "standard": {
