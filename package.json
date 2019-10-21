@@ -4,7 +4,7 @@
   "description": "Some aesthetic toppings for your Redux meal.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infinitered/reduxsauce.git"
+    "url": "https://github.com/jkeam/reduxsauce.git"
   },
   "main": "./dist/reduxsauce.js",
   "scripts": {
