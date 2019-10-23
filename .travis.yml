@@ -3,4 +3,16 @@ node_js:
   - 10
   - 11
   - 12
+  - 13
 after_success: npm run coveralls
+jobs:
+  include:
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: 12
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
