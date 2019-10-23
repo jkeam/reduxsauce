@@ -236,6 +236,12 @@ export default combineReducers({
 
 # Changes
 
+### Oct 23, 2019 - 1.1.1
+
+* `FIX` Upgrade dependencies
+* `FIX` Add more tests
+
+
 ### May 10, 2018 - 1.0.0 - 💃
 
 * `NEW` drops redux dependency sinc we weren't using it @pewniak747
