@@ -240,6 +240,7 @@ export default combineReducers({
 
 * `FIX` Upgrade dependencies
 * `FIX` Add more tests
+* `DOCS` Add badges
 
 
 ### May 10, 2018 - 1.0.0 - 💃
