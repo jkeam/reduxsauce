@@ -41,6 +41,6 @@ export default {
     ramda(),
     filesize()
   ],
-  external: [...ramdaFns, 'ramdasauce'],
+  external: [...ramdaFns],
   dest: 'dist/reduxsauce.js'
 }

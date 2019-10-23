@@ -43,9 +43,9 @@ test('{} produces a type-only action creator', t => {
 })
 
 test('{"foo": 1, "bar": 2} produces a valid action creator', t => {
-  const { Creators } = createActions({ helloWorld: {foo: 1, bar: 2} })
+  const { Creators } = createActions({ helloWorld: { foo: 1, bar: 2 } })
   t.is(typeof Creators.helloWorld, 'function')
-  t.deepEqual(Creators.helloWorld({foo: 10, 'foobar': 3}), { type: 'HELLO_WORLD', foo: 10, bar: 2 })
+  t.deepEqual(Creators.helloWorld({ foo: 10, foobar: 3 }), { type: 'HELLO_WORLD', foo: 10, bar: 2 })
 })
 
 test('custom action creators are supported', t => {
