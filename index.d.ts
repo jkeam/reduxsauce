@@ -42,4 +42,8 @@ declare module 'reduxsauce' {
   ): Reducer<S, A>;
 
   export function createTypes<T = DefaultActionTypes>(types: string, options?: Options): T;
+
+  export function resettableReducer(
+    typeToReset: string
+  ): <S, A extends Action = AnyAction>(originalReducer: Reducer<S, A>) => Reducer<S, A>;
 }
