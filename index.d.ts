@@ -2,7 +2,7 @@ declare module 'reduxsauce' {
   import { Action, AnyAction, Reducer } from 'redux';
 
   export interface Actions {
-    [action: string]: string[] | null;
+    [action: string]: (string[] | DefaultActionTypes) | null;
   }
 
   export interface DefaultActionTypes {
