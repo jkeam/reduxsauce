@@ -1,12 +1,12 @@
 declare module 'reduxsauce' {
-  import { Action, AnyAction, Reducer } from 'redux';
+  import { Action, AnyAction, Reducer, ActionCreator } from 'redux';
 
   export interface Actions {
-    [action: string]: string[] | null;
+    [action: string]: (string[] | DefaultActionTypes | ActionCreator<DefaultActionTypes>) | null;
   }
 
   export interface DefaultActionTypes {
-    [action: string]: string;
+    [action: string]: string | number | DefaultActionTypes | null;
   }
 
   export interface DefaultActionCreators {
