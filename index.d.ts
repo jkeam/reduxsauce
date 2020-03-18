@@ -6,7 +6,7 @@ declare module 'reduxsauce' {
   }
 
   export interface DefaultActionTypes {
-    [action: string]: string | number | DefaultActionTypes | null;
+    [action: string]: string;
   }
 
   export interface DefaultActionCreators {
