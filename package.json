@@ -16,8 +16,7 @@
     "lint": "standard",
     "prepublishOnly": "npm run build",
     "ci:publish": "yarn semantic-release",
-    "semantic-release": "semantic-release",
-    "prepare": "npm run build"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "redux"
