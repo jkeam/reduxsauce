@@ -235,18 +235,34 @@ export default combineReducers({
 ```
 
 # Changes
+Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
+
+### Jul 29, 2020 - Latest
+
+* `FIX` Update minor dependencies @jkeam
+* `FIX` Handle numbers in action/type names @ahwatts
+* `FIX` Allow creating an action without any overrides @jkeam
+
+### Jun 01, 2020 - 1.1.3
+
+* `FIX` Typescript definitions to fix createReducers @jkeam
+
+### Jan 18, 2020 - 1.1.2
+
+* `FIX` Typescript allow objects while creating actions @jkeam
 
 ### Oct 23, 2019 - 1.1.1
 
-* `FIX` Upgrade dependencies
-* `FIX` Add more tests
-* `DOCS` Add badges
+* `FIX` Upgrade dependencies @jkeam
+* `FIX` Add more tests @jkeam
+* `DOCS` Add badges @jkeam
 
+### Apr 15, 2019 - 1.1.0
+* `NEW` Generalize typedef @jkeam
 
 ### May 10, 2018 - 1.0.0 - 💃
 
 * `NEW` drops redux dependency sinc we weren't using it @pewniak747
-
 
 ### September 26, 2017 - 0.7.0
 
