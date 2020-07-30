@@ -18,6 +18,20 @@ test('types are snake case', t => {
   t.is(Types.HELLO_WORLD, 'HELLO_WORLD')
 })
 
+test('type names handle consecutive capitals', t => {
+  const { Types } = createActions({ setVIPById: null })
+  t.is(Types.SET_VIP_BY_ID, 'SET_VIP_BY_ID')
+})
+
+test('type names handle numbers', t => {
+  const { Types } = createActions({
+    storeS3Key: null,
+    usePython3Instead: null,
+  })
+  t.is(Types.STORE_S3_KEY, 'STORE_S3_KEY')
+  t.is(Types.USE_PYTHON3_INSTEAD, 'USE_PYTHON3_INSTEAD')
+})
+
 test('null produces a type-only action creator', t => {
   const { Creators } = createActions({ helloWorld: null })
   t.is(typeof Creators.helloWorld, 'function')
@@ -46,6 +60,12 @@ test('{"foo": 1, "bar": 2} produces a valid action creator', t => {
   const { Creators } = createActions({ helloWorld: { foo: 1, bar: 2 } })
   t.is(typeof Creators.helloWorld, 'function')
   t.deepEqual(Creators.helloWorld({ foo: 10, foobar: 3 }), { type: 'HELLO_WORLD', foo: 10, bar: 2 })
+})
+
+test('{"foo": 1, "bar": 2} produces a valid action creator and can call action without overrides', t => {
+  const { Creators } = createActions({ helloWorld: { foo: 1, bar: 2 } })
+  t.is(typeof Creators.helloWorld, 'function')
+  t.deepEqual(Creators.helloWorld(), { type: 'HELLO_WORLD', foo: 1, bar: 2 })
 })
 
 test('custom action creators are supported', t => {
