@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel'
+import { babel } from '@rollup/plugin-babel'
 import ramda from 'rollup-plugin-ramda'
 import filesize from 'rollup-plugin-filesize'
 
@@ -30,17 +30,19 @@ const ramdaFns = [
 ].map(fn => `ramda/src/${fn}`)
 
 export default {
-  entry: 'lib/reduxsauce.js',
-  format: 'cjs',
+  input: 'lib/reduxsauce.js',
   plugins: [
     babel({
+      babelHelpers: 'bundled',
       babelrc: false,
-      presets: [['es2015', { modules: false }], 'stage-0'],
-      plugins: ['external-helpers']
+      presets: [['@babel/preset-env', { modules: false }]]
     }),
     ramda(),
     filesize()
   ],
   external: [...ramdaFns],
-  dest: 'dist/reduxsauce.js'
+  output: {
+    file: 'dist/reduxsauce.js',
+    format: 'cjs'
+  }
 }

@@ -26,7 +26,7 @@ test('type names handle consecutive capitals', t => {
 test('type names handle numbers', t => {
   const { Types } = createActions({
     storeS3Key: null,
-    usePython3Instead: null,
+    usePython3Instead: null
   })
   t.is(Types.STORE_S3_KEY, 'STORE_S3_KEY')
   t.is(Types.USE_PYTHON3_INSTEAD, 'USE_PYTHON3_INSTEAD')
