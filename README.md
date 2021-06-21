@@ -153,8 +153,26 @@ export default createTypes(`
   CHANGE_PASSWORD_FAILURE
 
   LOGOUT
-`, {}) // options - the 2nd parameter is optional
+`, { prefix: 'foo' })
+```
 
+The second parameter is optional.
+
+```js
+// Types.js - the 2nd parameter is optional
+import { createTypes } from 'reduxsauce'
+
+export default createTypes(`
+  LOGIN_REQUEST
+  LOGIN_SUCCESS
+  LOGIN_FAILURE
+
+  CHANGE_PASSWORD_REQUEST
+  CHANGE_PASSWORD_SUCCESS
+  CHANGE_PASSWORD_FAILURE
+
+  LOGOUT
+`)
 ```
 
 ### Options
@@ -175,7 +193,23 @@ const { Types, Creators } = createActions({
   requestWithDefaultValues: { username: 'guest', password: null },
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
-}, {}) // options - the 2nd parameter is optional
+}, { prefix: 'foo' })
+```
+
+The second parameter is optional.
+
+```js
+// 2nd parameter is optional
+import { createActions } from 'reduxsauce'
+
+const { Types, Creators } = createActions({
+  loginRequest: ['username', 'password'],
+  loginSuccess: ['username'],
+  loginFailure: ['error'],
+  requestWithDefaultValues: { username: 'guest', password: null },
+  logout: null,
+  custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
+})
 ```
 
 The keys of the object will become keys of the `Creators`.  They will also become the keys of the `Types` after being converted to SCREAMING_SNAKE_CASE.
