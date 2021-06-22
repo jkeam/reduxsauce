@@ -6,12 +6,13 @@ node_js:
   - 13
   - 14
   - 15
+  - 16
 after_success: npm run coveralls
 jobs:
   include:
     # Define the release stage that runs semantic-release
     - stage: release
-      node_js: 12
+      node_js: 14
       script: skip
       deploy:
         provider: script

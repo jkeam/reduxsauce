@@ -1,7 +1,7 @@
 <img src='./_art/redux_sauce.png' align='left' />
 
 [![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
-[![Build Status](https://travis-ci.org/jkeam/reduxsauce.svg?branch=master)](https://travis-ci.org/jkeam/reduxsauce)
+[![Build Status](https://travis-ci.com/jkeam/reduxsauce.svg?branch=master)](https://travis-ci.com/jkeam/reduxsauce)
 [![Coverage Status](https://coveralls.io/repos/github/jkeam/reduxsauce/badge.svg?branch=master)](https://coveralls.io/github/jkeam/reduxsauce?branch=master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
@@ -153,8 +153,26 @@ export default createTypes(`
   CHANGE_PASSWORD_FAILURE
 
   LOGOUT
-`, {}) // options - the 2nd parameter is optional
+`, { prefix: 'foo' })
+```
 
+The second parameter is optional.
+
+```js
+// Types.js - the 2nd parameter is optional
+import { createTypes } from 'reduxsauce'
+
+export default createTypes(`
+  LOGIN_REQUEST
+  LOGIN_SUCCESS
+  LOGIN_FAILURE
+
+  CHANGE_PASSWORD_REQUEST
+  CHANGE_PASSWORD_SUCCESS
+  CHANGE_PASSWORD_FAILURE
+
+  LOGOUT
+`)
 ```
 
 ### Options
@@ -175,7 +193,23 @@ const { Types, Creators } = createActions({
   requestWithDefaultValues: { username: 'guest', password: null },
   logout: null,
   custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
-}, {}) // options - the 2nd parameter is optional
+}, { prefix: 'foo' })
+```
+
+The second parameter is optional.
+
+```js
+// 2nd parameter is optional
+import { createActions } from 'reduxsauce'
+
+const { Types, Creators } = createActions({
+  loginRequest: ['username', 'password'],
+  loginSuccess: ['username'],
+  loginFailure: ['error'],
+  requestWithDefaultValues: { username: 'guest', password: null },
+  logout: null,
+  custom: (a, b) => ({ type: 'CUSTOM', total: a + b })
+})
 ```
 
 The keys of the object will become keys of the `Creators`.  They will also become the keys of the `Types` after being converted to SCREAMING_SNAKE_CASE.
@@ -237,7 +271,11 @@ export default combineReducers({
 # Changes
 Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
 
-### Jul 29, 2020 - Latest
+### Jun 21, 2021 - Latest
+* `FIX` Update dependencies @jkeam
+* `DOCS` Update readme @jkeam
+
+### Jul 29, 2020 - 1.2.0
 
 * `FIX` Update minor dependencies @jkeam
 * `FIX` Handle numbers in action/type names @ahwatts
