@@ -271,7 +271,11 @@ export default combineReducers({
 # Changes
 Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
 
-### Jul 29, 2020 - Latest
+### Jun 21, 2021 - Latest
+* `FIX` Update dependencies @jkeam
+* `DOCS` Update readme @jkeam
+
+### Jul 29, 2020 - 1.2.0
 
 * `FIX` Update minor dependencies @jkeam
 * `FIX` Handle numbers in action/type names @ahwatts
