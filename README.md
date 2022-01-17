@@ -33,7 +33,7 @@ Every reducer I've written has a known and expected state.  And it's always an o
 const INITIAL_STATE = { name: null, age: null }
 ```
 
-If you're using seamless-immutable, this just get's wrapped. This is optional.
+If you're using seamless-immutable, this just gets wrapped. This is optional.
 
 ```js
 const INITIAL_STATE = Immutable({ name: null, age: null })
