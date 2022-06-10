@@ -48,7 +48,7 @@
     "rollup": "^2.52.1",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-ramda": "^1.0.5",
-    "semantic-release": "^17.4.4",
+    "semantic-release": "^19.0.3",
     "standard": "^16.0.3"
   },
   "peerDependencies": {
