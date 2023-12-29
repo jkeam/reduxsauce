@@ -1,0 +1,22 @@
+name: "Develop Build"
+run-name: develop-build-${{ github.run_number }}-${{ github.run_id }}
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  production-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.10.0'
+      - name: Install npm packages
+        run: npm ci
+      - name: Test
+        run: npm test
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
