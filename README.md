@@ -271,7 +271,12 @@ export default combineReducers({
 # Changes
 Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
 
-### Jun 22, 2021 - Latest
+### Dec 29, 2023 - Latest
+
+* `FIX` Update dependencies including upgrading peer dependency to redux 5.x @jkeam
+
+### Jun 22, 2021 - 1.2.1
+
 * `FIX` Update dependencies @jkeam
 * `DOCS` Update readme @jkeam
 
@@ -296,6 +301,7 @@ Note: `Latest` means the latest release.  This is also the latest version in [np
 * `DOCS` Add badges @jkeam
 
 ### Apr 15, 2019 - 1.1.0
+
 * `NEW` Generalize typedef @jkeam
 
 ### May 10, 2018 - 1.0.0 - 💃
