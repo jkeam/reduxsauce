@@ -11,7 +11,7 @@ const ramdaFns = [
   'has',
   'pipe',
   'trim',
-  'merge',
+  'mergeRight',
   'split',
   'without',
   'map',

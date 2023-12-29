@@ -1,18 +1,16 @@
 language: node_js
 node_js:
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
   - 16
+  - 17
+  - 18
+  - 19
+  - 20
 after_success: npm run coveralls
 jobs:
   include:
     # Define the release stage that runs semantic-release
     - stage: release
-      node_js: 14
+      node_js: 20
       script: skip
       deploy:
         provider: script
