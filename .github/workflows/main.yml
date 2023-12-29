@@ -6,7 +6,7 @@ on:
       - master
       - main
 jobs:
-  develop-build:
+  main-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
