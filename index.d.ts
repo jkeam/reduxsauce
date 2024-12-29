@@ -1,5 +1,5 @@
 declare module 'reduxsauce' {
-  import { Action, AnyAction, Reducer, ActionCreator } from 'redux';
+  import { Action, UnknownAction, Reducer, ActionCreator } from 'redux';
 
   export interface Actions {
     [action: string]: (string[] | ActionTypes | ActionCreator<ActionTypes>) | null;
@@ -14,7 +14,7 @@ declare module 'reduxsauce' {
   }
 
   export interface DefaultActionCreators {
-    [action: string]: (...args: any[]) => AnyAction;
+    [action: string]: (...args: any[]) => UnknownAction;
   }
 
   export interface Handlers<S> {
@@ -40,7 +40,7 @@ declare module 'reduxsauce' {
     options?: Options
   ): CreatedActions<T, C>;
 
-  export function createReducer<S = {}, A extends Action = AnyAction>(
+  export function createReducer<S = {}, A extends Action = UnknownAction>(
     initialState: S,
     handlers: Handlers<S>
   ): Reducer<S, A>;
@@ -49,9 +49,9 @@ declare module 'reduxsauce' {
 
   export function resettableReducer(
     typeToReset: string
-  ): <S, A extends Action = AnyAction>(originalReducer: Reducer<S, A>) => Reducer<S, A>;
+  ): <S, A extends Action = UnknownAction>(originalReducer: Reducer<S, A>) => Reducer<S, A>;
 
-  export function resettableReducer<S, A extends Action = AnyAction>(
+  export function resettableReducer<S, A extends Action = UnknownAction>(
     typeToReset: string,
     originalReducer: Reducer<S, A>
   ): Reducer<S, A>;
