@@ -30,26 +30,25 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "ramda": "^0.29.1"
+    "ramda": "^0.30.1"
   },
   "devDependencies": {
     "@ava/babel": "^2.0.0",
-    "@babel/cli": "^7.23.4",
-    "@babel/core": "^7.23.6",
-    "@babel/eslint-parser": "^7.23.3",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.23.5",
-    "@babel/register": "^7.22.15",
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/register": "^7.25.9",
     "@rollup/plugin-babel": "^6.0.4",
     "@semantic-release/git": "^10.0.1",
-    "ava": "^6.0.1",
+    "ava": "^6.2.0",
     "coveralls": "^3.1.1",
-    "nyc": "^15.1.0",
-    "rollup": "^4.9.1",
+    "nyc": "^17.1.0",
+    "rollup": "^4.29.1",
     "rollup-plugin-filesize": "^10.0.0",
     "rollup-plugin-ramda": "^1.0.5",
-    "semantic-release": "^22.0.12",
-    "standard": "^17.1.0"
+    "semantic-release": "^24.2.0",
+    "standard": "^17.1.2"
   },
   "peerDependencies": {
     "redux": "5.x"
