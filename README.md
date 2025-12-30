@@ -271,7 +271,12 @@ export default combineReducers({
 # Changes
 Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
 
-### Dec 29, 2023 - 1.3.0 - Latest
+### Dec 30, 2024 - 2.0.0
+
+* `FIX` Update dependencies including upgrading peer dependency 5.x @jkeam
+* `Breaking` Default action no longer defaults to deprecated AnyAction @jkeam
+
+### Dec 29, 2023 - 1.3.0
 
 * `FIX` Update dependencies including upgrading peer dependency to redux 5.x @jkeam
 
