@@ -273,7 +273,7 @@ Note: `Latest` means the latest release.  This is also the latest version in [np
 
 ### Dec 30, 2024 - 2.0.0
 
-* `FIX` Update dependencies including upgrading peer dependency 5.x @jkeam
+* `FIX` Upgrade dependencies and changed typescript type from @jkeam
 * `Breaking` Default action no longer defaults to deprecated AnyAction @jkeam
 
 ### Dec 29, 2023 - 1.3.0
