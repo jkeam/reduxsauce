@@ -269,7 +269,10 @@ export default combineReducers({
 ```
 
 # Changes
-Note: `Latest` means the latest release.  This is also the latest version in [npmjs.com](https://www.npmjs.com/package/reduxsauce).
+
+### Dec 30, 2025 - 2.1.0
+
+* `FIX` Upgrade dependencies @jkeam
 
 ### Dec 30, 2024 - 2.0.0
 
